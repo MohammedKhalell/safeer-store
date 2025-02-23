@@ -1,0 +1,366 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header-top {
+  justify-content: center;
+  display: flex;
+  background-color: #752157;
+  padding: 1rem 0;
+  color: white;
+}
+
+.container {
+  width: 83%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.logo-section .logo {
+  height: 40px;
+}
+
+.location-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.location-icon i {
+  font-size: 1.2rem;
+}
+
+.location-text span {
+  font-weight: bold;
+}
+
+.search-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.search-section::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #752157;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.category-select {
+  color: #752157;
+  font-weight: bold;
+  padding: 11px 18px;
+  border: none;
+  border-right: 1px solid #eee;
+  background-color: #EAEAEA;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 30px;
+  position: relative;
+  min-width: 70px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.clear-search {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.clear-search:hover {
+  color: #8B1874;
+}
+
+.search-input::placeholder {
+  color: #D6D6D6;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8B1874;
+}
+
+.language-section .lang-button,
+.auth-section .auth-button {
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.auth-section {
+  display: flex;
+}
+.language-section {
+  display: flex;
+}
+.icons-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  background-color: #fff;
+  color: #8B1874;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.header-bottom {
+  justify-content: center;
+  display: flex;
+  background-color: #611445;
+  padding: 0.5rem 0;
+}
+
+.categories-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  background-image: url('/Rectangle-6.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: 4% 0px 3% 15%;
+
+
+}
+.arrow-down {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #ffffff;
+  border-radius: 6px;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.discover {
+  color: #8B1874;
+  font-weight: 600;
+}
+
+.range {
+  color: #752157;
+  font-weight: 500;
+}
+
+.for {
+  color: #752157;
+  font-weight: 400;
+}
+
+.gaming {
+  color: #8B1874;
+  font-weight: 600;
+}
+
+.hero-description {
+  width: 84%;
+  margin: 0;
+  margin-bottom: 3%;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 550px;
+}
+
+.discover-button {
+  background-color: transparent;
+  color: #8B1874;
+  border: 2px solid #8B1874;
+  padding: 0.2rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.discover-button:hover {
+  background-color: rgba(139, 24, 116, 0.1);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.price, .amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.currency {
+  font-size: 1rem;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero-arrow:hover {
+  opacity: 0.8;
+}
+
+.hero-arrow.left {
+  left: 211px;
+}
+
+.hero-arrow.right {
+  right: 211px;
+}
+
+.hero-arrow svg {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 2px;
+}
+
+.hero-arrow.left svg {
+  left: -2px;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section .container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,236 @@
+.filter-sidebar {
+  width: 19%;
+}
+.filter-section {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 0;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-section h3 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  position: relative;
+}
+.filter-header {
+  justify-content: space-between;
+  display: flex;
+  gap: 78px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.filter-header h3 {
+  margin: 0;
+  padding: 0;
+}
+.filter-section h3::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #515151;
+  border-bottom: 1.5px solid #515151;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-top: -4px;
+}
+
+.filter-section.expanded h3::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.filter-group {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0;
+}
+
+.filter-section.expanded .filter-group {
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+/* Specific heights for different filter types */
+.filter-section[data-type="categories"].expanded .filter-group {
+  max-height: 372px;
+}
+
+.filter-section[data-type="discount"].expanded .filter-group {
+  max-height: 157px;
+}
+
+.filter-section[data-type="price"].expanded .filter-group {
+  max-height: 160px;
+}
+
+.filter-section[data-type="rate"].expanded .filter-group {
+  max-height: 140px;
+}
+
+.filter-section[data-type="color"].expanded .filter-group {
+  max-height: 120px;
+}
+
+.filter-group::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filter-group::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.filter-group::-webkit-scrollbar-thumb {
+  background: #515151;
+  border-radius: 4px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.filter-option:last-child {
+  margin-bottom: 8px;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 12px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #8b1874;
+  border-radius: 4px;
+}
+
+.rating-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.empty-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stars img,
+.empty-stars img {
+  width: 16px;
+  height: 16px;
+}
+
+.rate-text {
+  font-size: 14px;
+  color: #666;
+  margin-left: 4px;
+}
+
+.color-options {
+  display: flex;
+  gap: 12px;
+  padding: 8px 8px;
+  flex-wrap: wrap;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.color-option {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+  margin: 2px;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.selected {
+  transform: scale(1.1);
+}
+
+.color-option.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.price-range {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+.price-input {
+  width: 45px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.price-input::-webkit-inner-spin-button,
+.price-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-button {
+  background: #752157;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.price-button:hover {
+  background: #8b1874;
+}
+
+.filter-section[data-type="rate"] .filter-group,
+.filter-section[data-type="color"] .filter-group,
+.filter-section[data-type="price"] .filter-group {
+  overflow: hidden;
+}

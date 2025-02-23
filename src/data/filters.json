@@ -1,0 +1,56 @@
+{
+  "categories": [
+    { "id": "audio", "label": "Audio & Video" },
+    { "id": "blank", "label": "Blank Media" },
+    { "id": "cable", "label": "Cable Security Devices" },
+    { "id": "cleaning", "label": "Cleaning & Repair" },
+    { "id": "computer", "label": "Computer Cable Adapters" },
+    { "id": "game", "label": "Game Hardware" },
+    { "id": "hard", "label": "Hard Drive Accessories" },
+    { "id": "keyboard", "label": "Keyboards, Mice, Mous" },
+    { "id": "memory", "label": "Memory Cards" },
+    { "id": "monitor", "label": "Monitor Accessories" },
+    { "id": "printer", "label": "Printer Accessories" },
+    { "id": "ink", "label": "Printer Ink & Toner" },
+    { "id": "scanner", "label": "Scanner Accessories" },
+    { "id": "usb", "label": "USB Hubs" },
+    { "id": "console", "label": "Gaming Consoles" },
+    { "id": "controller", "label": "Gaming Controllers" },
+    { "id": "vr", "label": "Virtual Reality" },
+    { "id": "streaming", "label": "Streaming Devices" }
+  ],
+  "discounts": [
+    { "id": "5", "label": "5% Discount" },
+    { "id": "15", "label": "15% Discount" },
+    { "id": "25", "label": "25% Discount" },
+    { "id": "35", "label": "35% Discount" },
+    { "id": "50", "label": "50% Discount" },
+    { "id": "75", "label": "75% Discount" },
+    { "id": "10", "label": "10% Discount" },
+    { "id": "20", "label": "20% Discount" },
+    { "id": "30", "label": "30% Discount" },
+    { "id": "40", "label": "40% Discount" }
+  ],
+  "prices": [
+    { "id": "under25", "label": "Under $25" },
+    { "id": "25to50", "label": "$25 to $50" },
+    { "id": "50to100", "label": "$50 to $100" },
+    { "id": "100to200", "label": "$100 to $200" },
+    { "id": "200above", "label": "$200 & Above" }
+  ],
+  "ratings": [
+    { "id": "5", "stars": 5, "label": "& Up" },
+    { "id": "4", "stars": 4, "label": "& Up" },
+    { "id": "3", "stars": 3, "label": "& Up" },
+    { "id": "2", "stars": 2, "label": "& Up" },
+    { "id": "1", "stars": 1, "label": "& Up" }
+  ],
+ 
+  "colors": [
+    { "id": "blue", "hex": "#0066CC" },
+    { "id": "yellow", "hex": "#FFB800" },
+    { "id": "orange", "hex": "#FF6B00" },
+    { "id": "cyan", "hex": "#00D5E0" },
+    { "id": "purple", "hex": "#7000FF" }
+  ]
+} 

@@ -1,0 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/almarai');
+
+body{
+  margin: 0px;
+  font-family: 'Almarai', sans-serif;
+}
+
+/* Global styles */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #752157;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #611445;
+}

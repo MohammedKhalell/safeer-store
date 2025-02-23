@@ -1,0 +1,99 @@
+
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-header h2 {
+  font-weight: 400;
+  color: #333;
+  font-size: 30px;
+  margin: 0;
+}
+
+.sidebar-header p {
+  color: #767676;
+  font-size: 14px;
+  margin: 0.25rem 0 0;
+}
+
+.sidebar-header span {
+  color: #B71375;
+  font-size: 16px;
+  margin: 0.25rem 0 0;
+}
+.reset-button {
+  color: #B71375;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.rating-option .stars {
+  color: #FFB800;
+  letter-spacing: 2px;
+}
+
+.rating-option .empty-stars {
+  color: #ddd;
+}
+
+.rating-option .rate-text {
+  color: #666;
+  margin-left: 4px;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  max-height: 200px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.filter-section:not(.expanded) .color-options {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.color-option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  position: relative;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.selected {
+  border-color: #B71375;
+}
+
+.color-option.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+
+
+
+
