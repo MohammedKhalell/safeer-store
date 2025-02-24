@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterGroup.css';
+import './FilterGroup.scss';
 
 interface FilterOption {
   id: string;

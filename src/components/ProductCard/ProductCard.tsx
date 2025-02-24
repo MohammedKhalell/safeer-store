@@ -4,7 +4,7 @@ import { toggleWishlist } from "../../store/wishlistSlice";
 import { toggleCart } from "../../store/cartSlice";
 import { toggleCompare } from "../../store/compareSlice";
 import { RootState } from "../../store/store";
-import "./ProductCard.css";
+import "./ProductCard.scss";
 
 interface ProductCardProps {
   id: number;

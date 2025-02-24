@@ -2,8 +2,9 @@ import React, { useState, useMemo } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import Sidebar from "../Sidebar/Sidebar";
 import productData from "../../data/products.json";
-import filterOptions from "../../data/filters.json";
-import "./Products.css";
+import filterOptions from "../../data/filterOptions.json";
+import { Pagination } from "./Pagination/pagination"; 
+import "./Products.scss";
 
 type FilterSection = "categories" | "discount" | "price" | "rate" | "color";
 
@@ -425,96 +426,11 @@ const Products: React.FC = () => {
         </div>
 
         {totalPages > 0 && (
-          <div className="pagination">
-            <button
-              className={`pagination-button arrow ${currentPage === 1 ? 'disabled' : ''}`}
-              disabled={currentPage === 1}
-              onClick={() => handlePageChange(currentPage - 1)}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-
-            <div className="pagination-right">
-              <div className="pagination-numbers">
-                {totalPages <= 5 ? (
-                  // If 5 or fewer pages, show all numbers
-                  Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                    (number) => (
-                      <button
-                        key={number}
-                        className={`pagination-button ${
-                          number === currentPage ? "active" : ""
-                        }`}
-                        onClick={() => handlePageChange(number)}
-                      >
-                        {number}
-                      </button>
-                    )
-                  )
-                ) : (
-                  // If more than 5 pages, show first page, 5 sequential numbers, and last page
-                  <>
-                    {/* Always show first page if currentPage >= 4 */}
-                    {currentPage >= 4 && (
-                      <button
-                        className={`pagination-button ${currentPage === 1 ? "active" : ""}`}
-                        onClick={() => handlePageChange(1)}
-                      >
-                        1
-                      </button>
-                    )}
-
-                    {/* Show 5 sequential numbers */}
-                    {Array.from({ length: 5 }, (_, i) => {
-                      let pageNum;
-                      if (currentPage <= 3) {
-                        pageNum = i + 1;
-                      } else if (currentPage >= totalPages - 2) {
-                        pageNum = totalPages - 4 + i;
-                      } else {
-                        pageNum = currentPage - 2 + i;
-                      }
-                      return (
-                        <button
-                          key={pageNum}
-                          className={`pagination-button ${
-                            pageNum === currentPage ? "active" : ""
-                          }`}
-                          onClick={() => handlePageChange(pageNum)}
-                        >
-                          {pageNum}
-                        </button>
-                      );
-                    })}
-
-                    {/* Show last page if not in last 5 pages */}
-                    {totalPages > 5 && (
-                      <button
-                        className={`pagination-button ${
-                          currentPage === totalPages ? "active" : ""
-                        }`}
-                        onClick={() => handlePageChange(totalPages)}
-                      >
-                        {totalPages}
-                      </button>
-                    )}
-                  </>
-                )}
-              </div>
-
-              <button
-                className={`pagination-button arrow ${currentPage === totalPages ? 'disabled' : ''}`}
-                disabled={currentPage === totalPages}
-                onClick={() => handlePageChange(currentPage + 1)}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+          <Pagination 
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
         )}
       </div>
     </section>

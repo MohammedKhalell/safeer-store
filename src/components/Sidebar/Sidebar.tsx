@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterGroup from './FilterGroup/FilterGroup';
 import filterOptions from '../../data/filterOptions.json';
-import './Sidebar.css';
+import './Sidebar.scss';
 
 interface FilterState {
   categories: string[];

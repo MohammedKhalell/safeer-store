@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
-import './Header.css';
+import './Header.scss';
 
 const Header: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

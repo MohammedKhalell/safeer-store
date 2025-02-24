@@ -3,7 +3,7 @@ import { store } from './store/store';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Products from './components/Products/Products'
-import './App.css'
+import './App.scss'
 
 function App() {
   return (
